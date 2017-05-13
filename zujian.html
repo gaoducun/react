@@ -5,26 +5,22 @@
 		<title>React学习</title>
 	</head>
 	<body>
-		<div id="app">
-			
-		</div>
+		<div id="app"></div>
 		
 		
-		
-		
-		
+
 		<script type="text/javascript" src="build/react.js" ></script>
 		<script type="text/javascript" src="build/react-dom.js" ></script>
 		<script src="build/brower.js"></script>
 		<script type="text/babel">
 			 var HelloMessage = React.createClass({
 		        render: function() {
-		          return <h1>Hello World！</h1>;
+		          return <h1>Hello World！{this.props.name}</h1>;
 		        }
 		      });
 		
 		      ReactDOM.render(
-		        <HelloMessage />,
+		        <HelloMessage name="ZhangXiangFeng" />,
 		        document.getElementById('app')
 		      );
 		</script>
