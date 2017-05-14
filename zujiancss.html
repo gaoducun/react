@@ -3,6 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>React学习</title>
+		<style>
+			.pStyle{
+				font-size: 20px;
+				font-weight: bold;
+				
+			}
+		</style>
 	</head>
 	<body>
 		<div id="app">
@@ -17,16 +24,20 @@
 		<script type="text/javascript" src="build/react-dom.js" ></script>
 		<script src="build/brower.js"></script>
 		<script type="text/babel">
+			/**
+			 * 创建设置h1样式对象
+			 */
 			var hStyle={
-				
+				backgroundColor:"green",
+				color:"red"
 			}
 			
 			 var HelloMessage = React.createClass({
 		        render: function() {
 		          return (
 		          	<div style={{backgroundColor:"yellow",borderWidth:5,borderColor:"black",borderStyle:"solid"}}>
-		          	     <h1>{this.props.firstRow}</h1>
-		          	     <p>{this.props.secondRow}</p>
+		          	     <h1 style={hStyle}>{this.props.firstRow}</h1>
+		          	     <p className="pStyle">{this.props.secondRow}</p>
 		          	</div>
 		          )
 		        }
