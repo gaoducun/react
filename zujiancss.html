@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>React学习</title>
+	</head>
+	<body>
+		<div id="app">
+			
+		</div>
+		
+		
+		
+		
+		
+		<script type="text/javascript" src="build/react.js" ></script>
+		<script type="text/javascript" src="build/react-dom.js" ></script>
+		<script src="build/brower.js"></script>
+		<script type="text/babel">
+			var hStyle={
+				
+			}
+			
+			 var HelloMessage = React.createClass({
+		        render: function() {
+		          return (
+		          	<div style={{backgroundColor:"yellow",borderWidth:5,borderColor:"black",borderStyle:"solid"}}>
+		          	     <h1>{this.props.firstRow}</h1>
+		          	     <p>{this.props.secondRow}</p>
+		          	</div>
+		          )
+		        }
+		      });
+		
+		      ReactDOM.render(
+		        <HelloMessage firstRow="张三" secondRow="李四" />,
+		        document.getElementById('app')
+		      );
+		</script>
+	</body>
+</html>
