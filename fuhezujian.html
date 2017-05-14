@@ -17,14 +17,32 @@
 		<script type="text/javascript" src="build/react-dom.js" ></script>
 		<script src="build/brower.js"></script>
 		<script type="text/babel">
-			 var HelloMessage = React.createClass({
+			 var WebName = React.createClass({
 		        render: function() {
-		          return <h1>Hello World！</h1>;
+		          return <h1>22222222</h1>;
 		        }
+		      });
+		      
+		      var WebLink = React.createClass({
+		        render: function() {
+		          return <a href="123">234</a>;
+		        }
+		      });
+		      
+		      var WebShow=React.createClass({
+		      	  render:function(){
+		      	  	return (
+		      	  		<div>
+		      	  		   <WebName />
+		      	  		   <WebLink />
+		      	  		
+		      	  		</div>
+		      	  	);
+		      	  }
 		      });
 		
 		      ReactDOM.render(
-		        <HelloMessage />,
+		        <WebShow name="hao123" link="www.baidu.com" />,
 		        document.getElementById('app')
 		      );
 		</script>
