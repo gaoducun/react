@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>React学习</title>
+	</head>
+	<body>
+		<div id="app">
+			
+		</div>
+		
+		
+
+		<script type="text/javascript" src="build/react.js" ></script>
+		<script type="text/javascript" src="build/react-dom.js" ></script>
+		<script src="build/brower.js"></script>
+		<script type="text/babel">
+			/**
+			 * 
+			 * state状态
+			 * 
+			 * 和props一样，都是组件的属性
+			 * 
+			 * this.state
+			 * 
+			 * 
+			 */
+			
+			
+			/**
+			 * 
+			 * 需求：创建一个CheckButton的组件，包含一个checkbox类型<input>
+			 * 复选框在选中和未选中两种状态下会显示不同的文字，即根据状态渲染
+			 */
+			 var CheckButton = React.createClass({
+			 	getInitial,
+		        render: function() {
+		          return <button onClick={this.handleClick}>{this.props.buttonTitle}</button>;
+		        }
+		      });
+		
+		      ReactDOM.render(
+		        <MyButton buttonTitle="点击我" />,
+		        document.getElementById('app')
+		      );
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>React学习</title>
+	</head>
+	<body>
+		<div id="app">
+			
+		</div>
+		
+		
+
+		<script type="text/javascript" src="build/react.js" ></script>
+		<script type="text/javascript" src="build/react-dom.js" ></script>
+		<script src="build/brower.js"></script>
+		<script type="text/babel">
+			/**
+			 * 
+			 * 事件处理
+			 * 
+			 * react中的事件名称，首字母小写，驼峰命名法
+			 * 
+			 * 案例：定义一个组件，组件中包含一个button，给button绑定onClick事件
+			 * 
+			 * 
+			 */
+			 var MyButton = React.createClass({
+			 	handleClick:function(){
+			 		alert("点击按钮触发的效果！");
+			 	},
+		        render: function() {
+		          return <button onClick={this.handleClick}>{this.props.buttonTitle}</button>;
+		        }
+		      });
+		
+		      ReactDOM.render(
+		        <MyButton buttonTitle="点击我" />,
+		        document.getElementById('app')
+		      );
+		</script>
+	</body>
+</html>
