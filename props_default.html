@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>React学习</title>
+	</head>
+	<body>
+		<div id="app">
+			
+		</div>
+		
+		
+
+		<script type="text/javascript" src="build/react.js" ></script>
+		<script type="text/javascript" src="build/react-dom.js" ></script>
+		<script src="build/brower.js"></script>
+		<script type="text/babel">
+			/**
+			 * 
+			 * 设置组件属性的默认值
+			 * 
+			 * 通过实现组件的getDefaultProps方法，对属性设置默认值
+			 * 
+			 */
+			
+			var ShowTitle=React.createClass({
+			 	getDefaultProps:function(){
+			 		return {
+			 			title:"蓝区qq"
+			 		}
+			 	},
+			 	render:function(){
+			 		return <h1>{this.props.title}</h1>
+			 	}
+			 });
+			 
+			 
+			 ReactDOM.render(
+			 	<ShowTitle />,
+			 	document.getElementById("app")
+			 );
+		</script>
+	</body>
+</html>
