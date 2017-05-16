@@ -21,33 +21,25 @@
      *
      * 分析：组件与用户交互过程中，存在状态的变化，即输入框的值
      */
-    var  Input= React.createClass({
-        getInitialState:function () {
-            return {
-                value:"请输入"
-            }
+    var InputDemo = React.createClass({
+        getInitialState: function () {
+            return {value: 'Hello!'}
         },
-        handleChange:function () {
-            //通过event.target.value读取用户输入的值
-            this.setState({
-                value:event.target.value
-            });
-        },
-        render: function() {
-            //根据状态值，设置显示的文字
-            //在JSX语法中，不能直接使用if,使用三目运算符
-            var value=this.state.value;
+        render: function () {
             return (
-                    <div>
-                        <input type="text" value={value} onChange={this.handleChange} />
-                        <p>{value}</p>
-                    </div>
+                <div>
+                    <input type="text" onChange={this.handleChange} value={this.state.value} />
+                    <p>{this.state.value}</p>
+                </div>
             );
+        },
+        handleChange: function (event) {
+            this.setState({value: event.target.value});
         }
     });
 
     ReactDOM.render(
-            <Input />,
+            <InputDemo />,
         document.getElementById('app')
     );
 </script>
